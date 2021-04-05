@@ -1,0 +1,97 @@
+
+drop sequence sacct_seq;
+create sequence sacct_seq;
+commit;
+
+drop table sacct;
+create table sacct(
+	s_id varchar2(50) not null,
+	s_pw varchar2(50) not null,
+	s_name varchar2(50) not null,
+	s_gender varchar2(10) not null,
+	s_phone varchar2(20) not null,
+	s_email varchar2(50) not null,
+	s_date date not null,
+	primary key(s_id)
+);
+commit;
+
+drop table slogin;
+create table slogin(
+	s_id varchar2(50) not null,
+	s_name varchar2(50) not null,
+	s_gender varchar2(10) not null,
+	s_phone varchar2(20) not null,
+	s_email varchar2(50) not null,
+	primary key(s_id)
+);
+commit;
+
+drop sequence  sboard_seq;
+create sequence sboard_seq;
+commit;
+
+drop table sboard;
+create table sboard(
+	no number(7) not null,
+	id varchar2(50) not null,
+	title varchar2(150) not null,
+	content varchar2(300) not null,
+	count number(7) not null,
+	b_date date not null,
+	b_file varchar2(50),	
+	primary key(no)
+);
+commit;
+
+drop sequence sreply_seq;
+create sequence sreply_seq;
+commit;
+
+drop table sreply;
+create table sreply(
+	r_no number(7) not null,
+	r_id varchar2(50) not null,
+	r_content varchar2(150) not null,
+	r_date date not null,
+	r_bno number(7) not null,
+	primary key(r_no)
+);
+commit;
+
+
+set linesize 1500
+col no for 999
+col id for a10
+col title for a20
+col content for a20
+col count for 999
+col b_date for a10
+col b_file for a10
+
+col s_id for a10
+col s_pw for a10
+col s_name for a10
+col s_gender for a10
+col s_phone for a15
+col s_email for a20
+col s_date for a10
+
+col r_no for 999
+col r_id for a10
+col r_content for a30
+col r_date for a10
+col r_bno for 999
+
+
+
+---board.xml문서에서 기술 페이징+검색
+select * from (
+   select rownum rn, s.* from (select  * from  sboard  where ${skey} like '%' || #{sval}  || '%' ) s  
+)where rn between #{start} and  #{end} ;
+
+commit;
+
+
+
+
