@@ -30,4 +30,20 @@
     <servlet-name>NoticeController</servlet-name>
     <url-pattern>/NoticeController</url-pattern>
   </servlet-mapping>
+  
+  <!-- 04-15-목요일 POST한글깨짐 방지 -->
+  <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>
+            org.springframework.web.filter.CharacterEncodingFilter
+    </filter-class>
+    <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+</filter>
+<filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+</filter-mapping>
 </web-app>

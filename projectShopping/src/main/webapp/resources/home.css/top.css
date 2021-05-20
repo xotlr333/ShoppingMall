@@ -1,0 +1,394 @@
+@charset "EUC-KR";
+
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(path/to/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(path/to/MaterialIcons-Regular.woff2) format('woff2'),
+        url(path/to/MaterialIcons-Regular.woff) format('woff'),
+        url(path/to/MaterialIcons-Regular.ttf) format('truetype');
+    }
+
+
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        color: white;
+       
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+       
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+       
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+       
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+        }
+
+
+
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#container{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+#header1{
+	width:100%;
+	height: 100px;
+}
+
+#logo{
+	position: relative;
+	width:20%;
+	height: 100px;
+	left:0;
+	line-height: 100px;
+	padding-left :20px;
+	display: inline-block; 
+	
+}
+
+
+
+#logo h2{
+    font-size:50px;
+    font-weight: 700;
+    
+    text-shadow: 1 -px 0 #2222;
+   
+}
+
+#logo h2 a{
+    text-decoration: none;
+    color: black;
+       
+}
+
+
+#search{
+   display: inline-block;
+   padding: 1px 10px;
+   margin-top: 30px;
+   width:60%;
+  
+   
+}
+
+#search input{
+    position:relative;
+    height: 35px;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    outline:none;    
+    width:61%;
+    
+    
+
+   
+}
+
+#search button{
+    margin-left: -43px;
+    margin-top: 2px;
+    font-size: 30px; 
+    position:absolute;
+    border: 0;
+    outline:0;
+    
+    
+}
+
+
+ul{
+    list-style: none;
+}
+
+#login-box{
+	position: absolute;
+    right:0; 
+    top: 0;
+    float: right;
+    width: 420px;
+    margin-top: 1px;
+    margin-right: 10px;
+   
+  
+   
+  
+}
+
+#login-box ul li{
+    float: left;
+    padding:50px 10px 5px;
+    border-right:black;
+   
+    
+}
+
+
+#login-box ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #666;
+    
+}
+
+#login-box ul li:last-child{
+    border-right: none;
+}
+
+
+nav{
+   
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    
+}
+nav ul li a{
+    display: inline;
+    text-decoration: none;
+    
+  
+}
+
+#topMenu{
+    height: 60px;
+   
+   
+}
+
+#topMenu > li {
+	width:15%;
+    float: left;
+    margin-left : 1%;
+    position: relative;
+    text-align: center;
+   
+}
+
+#topMenu li a{
+    display: block;
+    color:white;
+   
+    font-weight: 600;
+    padding: 30px 45px ;
+    padding-bottom: 0;
+    text-decoration: none;
+  
+}
+
+
+#topMenu li a:hover{
+   color:#848cb5;
+   text-decoration: none;
+  
+   
+}
+
+#topMenu> li > ul {
+    display: none;
+    position: absolute;
+    width:  160px;
+    background-color: white;
+    opacity: 0.8;
+    left: 10px;
+    margin: 0;
+    
+       
+}
+
+
+#topMenu> li > ul >li {
+   
+   padding: 3px;  
+   
+}
+
+
+#topMenu> li > ul > li > a{
+    text-align:center;
+    font-size:  14px;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    
+}
+
+#topMenu > li:hover > ul{
+    display: block;
+    z-index: 10;
+  
+}
+
+#topMenu > li > ul > li > a:hover{
+    color:#848cb5;
+    text-decoration: none;
+}
+
+
+
+#footer{
+   
+    width: 100%;
+    height:450px;
+    position:relative;
+    z-index:20;
+    overflow:hidden;
+    border-top: 2px solid ;
+    background-color: #222;
+    color: white;
+   
+}
+
+#bottomMenu{
+    clear: left;
+    width: 100%;
+    height: 20px;
+    
+   
+   
+}
+
+#bottomMenu ul{
+    margin-top: 10px;
+    
+}
+
+#bottomMenu ul li{
+    padding: 5px 25px;
+   
+}
+
+#sns{
+    position: absolute;
+    right:0; 
+    
+}
+
+#sns p{
+    font-size: 14px;
+    color: white;
+}
+
+
+
+#sns ul li{
+    float: left;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+#sns ul li a{
+    text-decoration: none;
+}
+
+
+
+#information1{
+    padding-top: 20px;
+    border-top: solid 0.5px;
+    clear: left;
+    margin-top: 120px;
+   
+    font-size: 14px;
+}
+
+#information1 ul li{
+    float: left;
+    padding-right:10px;
+    margin-left: 20px;
+    border-right: 1px solid white;
+
+}
+
+#information1 ul li:last-child{
+    border-right: none;
+}
+
+#address{
+    clear: left;
+    margin-left: 20px;
+    font-size: 14px;
+    
+
+}
+
+#lawnotice{
+   clear: left;
+   margin-top: 30px;
+   margin-left: 20px;
+   font-size: 14px;
+    
+    
+}
+
+#notice{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 14px;
+    
+}
+
+
+
+#information2 li{
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+   
+    font-size: 14px;
+    border-right: 1px solid white;
+    padding-right: 10px;
+   
+}
+
+#information2 li a{
+    color: white;
+    text-decoration: none;
+    
+   
+}
+
+#information2 ul li:last-child{
+    border-right: none;
+}
+
+

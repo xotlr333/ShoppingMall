@@ -5,23 +5,27 @@
 <meta charset="UTF-8">
  <title> </title>
  <style type="text/css">
- 	 *{ font-size:24pt; font-weight: bold; }
+
+   #loading img{
+    padding-left: 33%;
+    padding-top: 10%;
+    }
+    
  </style>
  
  <script type="text/javascript">
- 	setTimeout("location.href='noticeList.do'", 2000);
+  setTimeout("location.href='home.do' ", 2000);
+  //setTimeout("location.href='userList.do' ", 2000);
  </script>
 </head>
 <body>
 
-   <div align="center">
-       STS0317프로젝트 index.jsp <p>
-       <img  src="./resources/images/a1.png"  width=400 height=250> <br>
-       <font color=blue> Waiting... Loading... 풍선 </font>
+   <div id="loading">
+       
+       <img  src="./resources/images/loading2.gif"  width=200 height=200> <br>
+       
     </div>
+    
+
 </body>
 </html>
-
-
-
-

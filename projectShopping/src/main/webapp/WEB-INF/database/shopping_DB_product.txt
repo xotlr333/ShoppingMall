@@ -1,0 +1,55 @@
+<출처 : 하이버 쇼핑몰>
+
+insert into product values('브랜드다모아','폴로 긴팔 티셔츠','1-2.jpg',2500,24800,'navy,charcoal,red,gray,kaki,white,black','S,M,L,XL',1,sysdate,'1-1.jpg',produ_seq.nextval);
+insert into product values('그레이슨','CLUB 맨투맨','2-2.jpg',2500,36300,'gray,black','S,M,L,XL',1,sysdate,'2-1.jpg',produ_seq.nextval);
+insert into product values('하이버라인','루즈핏 긴팔티셔츠','3-2.jpg',0,19900,'navy,gray,white,black,kaki,green','S,M,L,XL',1,sysdate,'3-1.jpg',produ_seq.nextval);
+insert into product values('다이클레즈','매치로고 맨투맨','4-2.jpg',3000,28900,'navy,gray,white,black','S,M,L,XL',1,sysdate,'4-1.jpg',produ_seq.nextval);
+insert into product values('어반아울렛','나이키 봄 맨투맨','5-2.jpg',3000,32700,'black','S,M,L,XL',1,sysdate,'5-1.jpg',produ_seq.nextval);
+insert into product values('에인트','나이키 스우시 반팔티','6-2.jpg',2500,37100,'white','S,M,L',1,sysdate,'6-1.jpg',produ_seq.nextval);
+insert into product values('플루크','롱슬리브 긴팔티셔츠','7-2.jpg',2500,19500,'navy,gray,white,black,beige','S,M,L',1,sysdate,'7-1.jpg',produ_seq.nextval);
+insert into product values('더로즈','와펜 코튼 맨투맨','8-2.jpg',3000,376300,'black','M,L,XL',1,sysdate,'8-1.jpg',produ_seq.nextval);
+insert into product values('트릴리온','오버핏 반팔티셔츠','9-2.jpg',2500,32800,'black','M,L,XL',1,sysdate,'9-1.jpg',produ_seq.nextval);
+insert into product values('센스오브뉴욕','폴로 클래식 티셔츠','10-2.jpg',2500,239000,'white,black','M,L,XL',1,sysdate,'10-1.jpg',produ_seq.nextval);
+insert into product values('메인부스','Disc Jockey T-shirt','11-2.jpg',2500,29800,'black','M,L,XL',1,sysdate,'11-1.jpg',produ_seq.nextval);
+insert into product values('어커버','오버핏 후드','12-2.jpg',2500,19900,'gray','M,L,XL',1,sysdate,'12-1.jpg',produ_seq.nextval);
+insert into product values('미니멀프로젝트','오버핏 아노락','13-2.jpg',3000,49400,'cool gray','M,L',1,sysdate,'13-1.jpg',produ_seq.nextval);
+insert into product values('더뉴블랙','클래식 맨투맨','14-2.jpg',2500,232000,'dark navy','M,L,XL',1,sysdate,'14-1.jpg',produ_seq.nextval);
+insert into product values('그레이슨','라운드넥 맨투맨','15-2.jpg',3000,37900,'black','S,M,L,XL',1,sysdate,'15-1.jpg',produ_seq.nextval);
+insert into product values('메종파르코','스트라이프 긴팔티셔츠','16-2.jpg',0,166000,'black','S,M,L,XL',1,sysdate,'16-1.jpg',produ_seq.nextval);
+insert into product values('하이버라인','루즈핏 티셔츠','17-2.jpg',0,22300,'navy,gray,white,black,brown','M,L,XL',1,sysdate,'17-1.jpg',produ_seq.nextval);
+
+insert into product values('에인트','스우시 조거팬츠','18-2.jpg',2500,55700,'black','S,M,L',2,sysdate,'18-1.jpg',produ_seq.nextval);
+insert into product values('하이버라인','세미와이드핏 슬랙스','19-2.jpg',0,22300,'gray,black','M,L,XL',2,sysdate,'19-1.jpg',produ_seq.nextval);
+insert into product values('오더플리즈','테이퍼드핏 크림진','20-2.jpg',2500,35600,'cream','S,M,L,XL',2,sysdate,'20-1.jpg',produ_seq.nextval);
+insert into product values('랩101','BASIC WAXH DENIM','21-2.jpg',2500,40600,'blue','S,M,L,XL',2,sysdate,'21-1.jpg',produ_seq.nextval);
+insert into product values('하이버라인','레귤러 슬랙스','22-2.jpg',0,44600,'gray,black','M,L,XL',2,sysdate,'22-1.jpg',produ_seq.nextval);
+insert into product values('아티스트웨어','패치 카고조거팬츠','23-2.jpg',0,40100,'black','M,L,XL',2,sysdate,'23-1.jpg',produ_seq.nextval);
+insert into product values('콜릿','세미와이트 밴딩슬랙스','24-2.jpg',2500,28500,'black','M,L,XL',2,sysdate,'24-1.jpg',produ_seq.nextval);
+insert into product values('랩101','SIDE CUT STONE WASH','25-2.jpg',3000,40600,'black','M,L,XL',2,sysdate,'25-1.jpg',produ_seq.nextval);
+insert into product values('에인트','나이키 스우시 반바지','26-2.jpg',2500,19700,'white,black,red','S,M,L,XL',2,sysdate,'26-1.jpg',produ_seq.nextval);
+insert into product values('탑보이','데일리 밴딩 슬랙스','27-2.jpg',2500,15900,'navy,gray,white,black','S,M,L,XL',2,sysdate,'27-1.jpg',produ_seq.nextval);
+insert into product values('에이들','와이드 밴들 슬랙스','28-2.jpg',2500,25500,'gray','M,L,XL',2,sysdate,'28-1.jpg',produ_seq.nextval);
+insert into product values('파렌하이트','핫 힙 워싱 데님','29-2.jpg',3000,48700,'blue','S,M,L,XL',2,sysdate,'29-1.jpg',produ_seq.nextval);
+insert into product values('메이킷투','스트레이트 와이드 데님','30-2.jpg',2500,49200,'gray','S,M,L,XL',2,sysdate,'30-1.jpg',produ_seq.nextval);
+insert into product values('리플라이퍼키','서퍼브핏 스탠다드 데님','31-2.jpg',2500,40300,'blue','S,M,L,XL',2,sysdate,'31-1.jpg',produ_seq.nextval);
+insert into product values('피아네르','트레이닝 바지','32-2.jpg',3000,35200,'gray,black','M,L,XL',2,sysdate,'32-1.jpg',produ_seq.nextval);
+insert into product values('에인트','나아키 클럽 조거팬츠','33-2.jpg',2500,53400,'gray,black','M,L,XL',2,sysdate,'33-1.jpg',produ_seq.nextval);
+insert into product values('에인트','나이키 스우시 조거팬츠','34-2.jpg',2500,55700,'gray','M,L,XL',2,sysdate,'34-1.jpg',produ_seq.nextval);
+
+insert into product values('탑보이','싱글 오버핏 미니멀 자켓','35-2.jpg',2500,39900,'beige,black','M,L,XL',3,sysdate,'35-1.jpg',produ_seq.nextval);
+insert into product values('하이버라인','루즈핏 포켓 블루종','36-2.jpg',0,39500,'black','M,L,XL',3,sysdate,'36-1.jpg',produ_seq.nextval);
+insert into product values('탑보이','오버핏 바람막이 점퍼','37-2.jpg',2500,35900,'navy,black','M,L,XL',3,sysdate,'37-1.jpg',produ_seq.nextval);
+insert into product values('탑보이','오버핏 블레이져 자켓','38-2.jpg',2500,52700,'beige,black','M,L,XL',3,sysdate,'38-1.jpg',produ_seq.nextval);
+insert into product values('아티스트웨어','제네시스 바람막이','39-2.jpg',2500,124300,'black','M,L,XL',3,sysdate,'39-1.jpg',produ_seq.nextval);
+insert into product values('에인트','나이키 우븐 바람막이','40-2.jpg',2500,43500,'navy,black','M,L,XL',3,sysdate,'40-1.jpg',produ_seq.nextval);
+insert into product values('블론드나인','HALF KNIT CARDIGAN','41-2.jpg',3000,43400,'blue','L,XL',3,sysdate,'41-1.jpg',produ_seq.nextval);
+insert into product values('쏘카라멜해운대','스톤아일랜드 후드자켓','42-2.jpg',2500,770000,'black','M,L,XL',3,sysdate,'42-1.jpg',produ_seq.nextval);
+insert into product values('더뉴블랙','메종키츠네 울 가디건','43-2.jpg',3000,331800,'navy','M,L,XL',3,sysdate,'43-1.jpg',produ_seq.nextval);
+insert into product values('까르피','CP컴퍼니 집업 자켓','44-2.jpg',2500,236000,'black','M,L,XL',3,sysdate,'44-1.jpg',produ_seq.nextval);
+insert into product values('탑보이','오버핏 가디건','45-2.jpg',2500,23900,'ivory,charcoal,beige,navy,gray,white,black,brown','M,L,XL',3,sysdate,'45-1.jpg',produ_seq.nextval);
+insert into product values('센스오브뉴욕','폴로 라이트웨이트 자켓','46-2.jpg',3000,285300,'black','M,L,XL',3,sysdate,'46-1.jpg',produ_seq.nextval);
+insert into product values('까르피','아미 해링턴 자켓','47-2.jpg',2500,635000,'black','M,L,XL',3,sysdate,'47-1.jpg',produ_seq.nextval);
+insert into product values('탑보이','오버핏 후드 코트','48-2.jpg',3000,46800,'blue,black,mocha','M,L,XL',3,sysdate,'48-1.jpg',produ_seq.nextval);
+insert into product values('하이버라인','루즈핏 가디건','49-2.jpg',0,22500,'beige,gray','M,L,XL',3,sysdate,'49-1.jpg',produ_seq.nextval);
+insert into product values('탑보이','울 라이크 트러커 자켓','50-2.jpg',2500,35700,'beige,gray,pink,black,brown','M,L,XL',3,sysdate,'50-1.jpg',produ_seq.nextval);
+insert into product values('에인트','나이키 헤리티지 바람막이','51-2.jpg',2500,119100,'black','M,L,XL',3,sysdate,'51-1.jpg',produ_seq.nextval);
