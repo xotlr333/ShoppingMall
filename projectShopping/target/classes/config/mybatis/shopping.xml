@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="shopping">	
+
+<!-- start 공지사항 -->
+	<select id="noticeSelectAll" parameterType="net.hb.shopping.notice.NoticeDTO" resultType="net.hb.shopping.notice.NoticeDTO">
+		select * from (select rownum rn, n.* from (select * from notice 
+		<if test="skey != 'all'">
+			<if test="skey=='title'">
+				where title like '%' || #{sval} || '%'
+			</if>
+		</if>
+		 order by wdate desc) n) where rn between #{start} and #{end}
+	</select>
+	
+	<select id="noticeSelectOne" parameterType="int" resultType="net.hb.shopping.notice.NoticeDTO">
+		select * from notice where code = #{code}
+	</select>
+	
+	<insert id="noticeInsert" parameterType="net.hb.shopping.notice.NoticeDTO">
+		insert into notice values(#{title}, #{content}, sysdate, noti_seq.nextval)
+	</insert>
+	
+	<select id="noticeTotalAll" resultType="int">
+		select count(*) from notice
+	</select>
+	
+	<select id="noticeTotal" parameterType="net.hb.shopping.notice.NoticeDTO" resultType="int">
+		select count(*) from QnA
+		<if test="skey != 'all'">
+			<if test="skey=='title'">
+				where title like '%' || #{sval} || '%'
+			</if>
+		</if>
+	</select>
+	
+	<delete id="noticeDelete" parameterType="int">
+		delete from notice where code = #{code}
+	</delete>
+	
+	<update id="noticeEdit" parameterType="net.hb.shopping.notice.NoticeDTO">
+		update notice set title=#{title}, content=#{content}, wdate=sysdate where code=#{code}
+	</update>
+<!-- end 공지사항 -->
+	
+<!-- start 고객문의 -->
+	<select id="QnASelectAll" parameterType="net.hb.shopping.QnA.QnADTO" resultType="net.hb.shopping.QnA.QnADTO">
+		select * from (select rownum rn, q.* from (select * from QnA 
+		<if test="skey != 'all'">
+			<if test="skey=='title'">
+				where title like '%' || #{sval} || '%'
+			</if>
+			<if test="skey=='userid'">
+				where userid like '%' || #{sval} || '%'
+			</if>
+		</if>
+		 order by wdate desc) q) where rn between #{start} and #{end}
+	</select>
+	
+	<select id="QnATotalAll" resultType="int">
+		select count(*) from QnA
+	</select>
+	
+	<select id="QnATotal" parameterType="net.hb.shopping.QnA.QnADTO" resultType="int">
+		select count(*) from QnA
+		<if test="skey != 'all'">
+			<if test="skey=='title'">
+				where title like '%' || #{sval} || '%'
+			</if>
+			<if test="skey=='userid'">
+				where userid like '%' || #{sval} || '%'
+			</if>
+		</if>
+	</select>
+	
+	<select id="QnASelectOne" parameterType="int" resultType="net.hb.shopping.QnA.QnADTO">
+		select * from QnA where code = #{code}
+	</select>
+	
+	<insert id="QnAInsert" parameterType="net.hb.shopping.QnA.QnADTO">
+		insert into QnA values(#{userid}, #{title}, #{content}, sysdate, QnA_seq.nextval)
+	</insert>
+	
+	<delete id="QnADelete" parameterType="int">
+		delete from QnA where code = #{code}
+	</delete>
+	
+	<update id="QnAEdit" parameterType="net.hb.shopping.QnA.QnADTO">
+		update QnA set title=#{title}, content=#{content}, wdate=sysdate where code=#{code}
+	</update>
+	
+	<select id="QnAReplySelect" parameterType="int" resultType="net.hb.shopping.QnA.reply.QnAReplyDTO">
+		select * from QnA_reply where code = #{code}
+	</select>
+	
+	<insert id="QnAReplyInsert"  parameterType="net.hb.shopping.QnA.reply.QnAReplyDTO">
+		insert into QnA_reply values(#{code},#{r_content},QnA_re_seq.nextval)
+	</insert>
+	
+	<delete id="QnAReplyDelete" parameterType="int">
+		delete from QnA_reply where r_code = #{r_code}
+	</delete>
+	
+	<update id="QnAReplyEdit" parameterType="net.hb.shopping.QnA.reply.QnAReplyDTO">
+		update QnA_reply set r_content=#{r_content} where r_code=#{r_code}
+	</update>
+<!-- end 고객문의 -->
+
+<!-- start 상품페이지 -->
+	<select id="productSelectAll" parameterType="net.hb.shopping.product.ProductDTO" resultType="net.hb.shopping.product.ProductDTO">
+		select * from (select rownum rn, p.* from (
+		select * from product 
+			<if test="pcategory=='top'">
+				 where category = 1
+			</if>
+			<if test="pcategory=='jean'">
+				 where category = 2
+			</if>
+			<if test="pcategory=='outer'">
+				 where category = 3
+			</if>
+		
+			<if test="categ=='recent'">
+				order by wdate desc
+			</if>
+			<if test="categ=='priceH'">
+				order by price desc
+			</if>
+			<if test="categ=='priceL'">
+				order by price
+			</if>
+		) p ) where rn between #{start} and #{end}
+	</select>
+	
+	<select id="productHomeSelectAll" resultType="net.hb.shopping.product.ProductDTO">
+		select * from product
+	</select>
+	
+	<select id="productSelectOne" parameterType="int" resultType="net.hb.shopping.product.ProductDTO">
+		select * from product where code = #{code}
+	</select>
+	
+	<select id="productTotalAll" parameterType="net.hb.shopping.product.ProductDTO" resultType="int">
+		select count(*) from product
+			<if test="pcategory=='top'">
+				 where category = 1
+			</if>
+			<if test="pcategory=='jean'">
+				 where category = 2
+			</if>
+			<if test="pcategory=='outer'">
+				 where category = 3
+			</if>
+	</select>
+	
+	<insert id="productInsert" parameterType="net.hb.shopping.product.ProductDTO">
+		insert into product values(#{brand}, #{title}, #{content}, #{delivery}, #{price}, #{color}, #{psize}, #{category},sysdate, #{img}, produ_seq.nextval)
+	</insert>
+	
+	<delete id="productDelete" parameterType="int">
+		delete from product where code = #{code}
+	</delete>
+	
+	<update id="productEdit" parameterType="net.hb.shopping.product.ProductDTO">
+		update product set brand=#{brand},title=#{title}, content=#{content},price=#{price},delivery=#{delivery},
+							color=#{color},psize=#{psize},category=#{category},img=#{img}, wdate=sysdate where code=#{code}
+	</update>
+
+<!-- end 상품페이지 -->
+
+<!-- start 장바구니 -->
+	<insert id="cartInsert" parameterType="net.hb.shopping.cart.CartDTO">
+		insert into cart values(#{code}, #{brand}, #{title}, #{delivery}, #{price}, #{color}, #{psize}, #{img}, #{p_code},cart_seq.nextval)
+	</insert>
+	
+	<select id="cartList" parameterType="int" resultType="net.hb.shopping.cart.CartDTO">
+		select * from cart where code = #{code}
+	</select>
+	
+	<delete id="cartDelete" parameterType="int">
+		delete from cart where c_code = #{c_code}
+	</delete>
+	
+<!-- end 장바구니 -->
+
+<!-- start 주문하기 -->
+	<insert id="orderInsert" parameterType="net.hb.shopping.order.OrderDTO">
+		insert into s_order values(#{p_brand},#{p_title},#{p_color},#{p_psize},#{p_img_name},
+									#{p_price}, #{p_delivery}, #{p_totalprice},
+									#{u_code},#{u_name},#{u_phone},#{u_email},#{u_recipient},#{u_recipient_phone},
+									#{u_postcode},#{u_roadAddress},#{u_detailAddress},#{u_memo},
+									#{payMethod},sysdate,#{c_code},order_seq.nextval)
+	</insert>
+	
+	<select id="orderList" parameterType="int" resultType="net.hb.shopping.order.OrderDTO">
+		select * from s_order where u_code = #{code}
+	</select>
+	
+	<delete id="orderDelete" parameterType="int">
+		delete from s_order where code = #{code}
+	</delete>
+
+<!-- end 주문하기 -->
+</mapper>
+
+
+
+
+
+
+

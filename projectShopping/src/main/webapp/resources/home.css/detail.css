@@ -1,0 +1,84 @@
+@charset "EUC-KR";
+
+#detail1{ 
+
+margin-top: 30px;
+margin-left: 30px;
+margin-right: 30px;
+margin-bottom: 70px;
+
+
+
+  border-bottom: 1px solid black;
+}
+
+
+
+#detail1{
+  display: inline;
+}
+
+#detail2{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#detail2 input[type="radio"]{
+display: none;
+}
+
+
+
+#tabMenu label{
+    display: inline-block;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+   
+    width: 20.33%;
+
+
+}
+
+#detail2 label:hover{
+    color: #222;
+    cursor: pointer;
+}
+
+#detail2 input:checked + label{
+    color: #222;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+ 
+}
+
+
+
+
+.tabcontent{
+  
+    
+    display: none;
+    padding: 20px;
+    border-top: 1px solid black;  
+   
+}
+
+
+
+#tabMenu{
+    
+    width: 100%;
+    margin-top: 30px;
+      
+}
+
+
+
+#tab1:checked ~ #pinformation,
+#tab2:checked ~ #review,
+#tab3:checked ~ #qna,
+#tab4:checked ~ #orderinformation{
+    display: block;
+}

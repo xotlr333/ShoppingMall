@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="shopping">
+
+
+   
+   <insert id="add" parameterType="net.hb.shopping.login.ClientdbDTO">
+      insert into clientdb values (#{userid},#{name}, #{email}, #{phone}, #{pwd}, #{birth_y}, #{birth_m}, #{birth_d}, #{check1}, #{check2},  #{check3}, #{check4}, #{check5},client_seq.nextval) 
+   </insert>
+   
+   <select id="slist" resultType="net.hb.shopping.product.ProductDTO">
+      select * from ( select * from product 
+      <if test="keyword !=null">
+      where title like upper('%'||#{keyword}||'%') or brand like upper('%'||#{keyword}||'%') </if> )
+   </select> 
+
+
+</mapper>

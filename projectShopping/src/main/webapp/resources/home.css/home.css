@@ -1,0 +1,94 @@
+@charset "EUC-KR";
+
+
+
+
+#myCarousel{
+	width: 100%;
+	height: 400px;
+}
+
+#myCarousel div div a img {
+	width: 100%;
+	height: 400px;
+}
+
+
+
+#contents{
+	
+	width :100%;
+    min-height : 100%;
+    margin-top: 50px;
+    position : relative;
+    padding-bottom : 50px;
+   
+ 
+  
+   
+}
+
+
+#contents h2{
+	 margin-left : 2%;
+	
+}
+
+
+
+#contents h5 a{
+	margin-left: 90%;
+	text-decoration: none;
+	color : black;
+	
+}
+
+
+
+#contents table {
+	margin-left: auto;
+	margin-right : auto;
+	margin-bottom : 50px;
+	
+}
+
+#items{
+	padding: 10px;
+	
+}
+
+
+
+#items div{
+	padding: 5px 5px;
+	margin-left: auto;
+	margin-right : auto;
+	
+	
+}
+
+
+#items a{
+	text-decoration: none;
+	color : black;
+		
+}
+
+
+
+.price{float: left;
+       width: 33%;}
+
+
+
+#sprice{
+text-decoration:line-through;
+text-align :right;
+font-size: 13px;
+}
+
+#sp{
+  text-align :center;
+  color: red;   
+}
+
